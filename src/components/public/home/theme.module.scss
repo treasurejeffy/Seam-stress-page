@@ -1,0 +1,39 @@
+@import '../../shared/variables.scss';
+
+body.black-bg {
+    background-color: $black-bg !important;
+    color: #fff !important;
+}
+
+body.gold-bg {
+    background-color: $gold-bg !important;
+    color: #000 !important;
+}
+
+body.white-bg {
+    background-color: $white-bg !important;
+    color: #000 !important;
+}
+
+body.default-bg {
+    background-color: $default-bg !important;
+    color: #000 !important;
+}
+
+.fixed_button {
+    position: fixed;
+    bottom: 20px;
+    right: 0;
+    z-index: 1000;
+  
+    .icon_button {
+        background: none;
+        border: none;
+        color: $primary-color; // Adjust color as needed
+        font-size: 24px;
+    }
+}
+
+.theme{
+    color: $gold-bg;
+}

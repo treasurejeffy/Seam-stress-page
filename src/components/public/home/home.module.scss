@@ -1,0 +1,255 @@
+@import '../../shared/variables.scss'; 
+@import './theme.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Nanum+Myeongjo:wght@400;700;800&family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sevillana&display=swap');
+
+.banner {
+  animation: bounceIn 1s ease-out;
+}
+
+.banner_container {
+  height: 100vh;
+
+  // Apply height for md and down
+  @media (max-width: 992px) {
+    height: auto;
+    padding: 50px 0;
+  }
+
+  h1 {
+    font-family: "Sevillana", cursive;
+    font-weight: 550;
+    font-style: normal;
+  }
+  
+  .heading {
+    font-family: "Sevillana", cursive;
+    font-weight: 600;
+    font-style: normal;
+    background: linear-gradient(40deg, $primary-color, $secondary-color);
+    -webkit-background-clip: text; /* For WebKit browsers */
+    background-clip: text; /* Non-webkit background clip */
+    color: transparent; /* Make text transparent to allow gradient to show */
+  }
+}
+
+.banner {
+  .btn {
+    position: relative;
+    overflow: hidden;
+    padding: 18px 28px;
+    outline: none;
+    background-color: $secondary-color; // Default background color (dark)
+    color: $primary-color; // Default text color (gold)
+    font-weight: 700;
+    font-size: large;
+    text-transform: uppercase;
+    transition: color 0.3s ease, background-color 0.3s ease; // Smooth text color and background transition
+    border-right: 3px solid black; // Add border-right
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $primary-color; // Hover background color (gold)
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      z-index: 0; // Ensure it is behind the text
+    }
+
+    &:hover::before {
+      transform: translateX(0); // Slide the background in from left to right
+    }
+
+    &:hover {
+      color: $secondary-color; // Change text color to dark on hover
+    }
+
+    span {
+      position: relative;
+      z-index: 1; // Keep the text above the background
+    }
+  }
+}
+
+.img_div {
+  width: 510px;
+  height: 550px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  border: 8px solid;
+  border-image: linear-gradient(40deg, $primary-color, $secondary-color, $primary-color, $secondary-color) 1;
+  mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.801) 50%);
+  -webkit-mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%);
+  overflow: hidden;
+}
+
+.sliderImage {
+  animation: bounceRight 1s ease-out; // Animation for the image transition
+}
+
+@keyframes bounceRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(20%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bounceRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.threeBox{
+  padding: 20px 10px 50px 10px;
+}
+
+// styles for quality product and support
+.quality_product {
+  padding: 40px 40px;
+
+  .hand_thumb {
+    color: $primary-color;
+  }
+
+  // Styles for all h3 elements within the quality_product class
+  h3 {
+    color: $primary-color;
+    font-family: "Overlock", serif;
+    font-weight: 600;
+    font-style: normal;
+    margin-bottom: 19px;
+  }
+
+  p{
+    color: #ffffff;
+    font-size: 14.9px;
+    letter-spacing: 0.8px;
+  }
+}
+
+.price {
+  padding: 40px 45px;
+  background-color: $primary-color;
+
+  .hand_thumb {
+    color: #000000;
+  }
+
+  // Styles for all h4 elements within the quality_product class
+  h3 {
+    color: #000000;
+    font-family: "Overlock", serif;
+    font-weight: 600;
+    font-style: normal;
+    margin-bottom: 15px;
+  }
+
+  p{
+    color: #000000;
+    font-size: 14.9px;
+    letter-spacing: 0.8px;
+  }
+}
+
+.intro {
+  margin: 30px 0px;
+  .row {
+    display: flex; /* Use Flexbox for row */
+    align-items: stretch; /* Stretch items to have the same height */
+  }
+
+  .Image {
+    width: 100%;
+    height: 600px; /* Ensure the image fills the column */
+    object-fit: cover; /* Ensure the image covers the column without distortion */
+    border-radius: 5px; /* Optional: Add rounded corners for better aesthetics */
+  }
+
+  .IntroText {
+    padding: 20px; /* Add some spacing for content */
+    h6 {
+      color: $primary-color;
+      font-family: "Overlock", serif;
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+
+    h3 {
+      font-family: "Overlock", serif;
+      font-weight: 750;
+      font-style: normal;
+      line-height: 40px;
+      letter-spacing: 1.9px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-family: "Overlock", serif;
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0; /* Ensures the list starts at the correct position */
+      margin: 0;
+
+      li {
+        display: flex;
+        align-items: center; /* Align icon and text */
+        font-family: "Overlock", serif;
+        font-weight: 700;
+        font-size: 16px;
+        font-style: normal;
+        margin-bottom: 10px; /* Add spacing between list items */
+
+        span {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 30px;
+          height: 30px;
+          background-color: $primary-color; /* Set background to $primary-color */
+          color: #fff; /* Ensure the icon is visible */
+          border-radius: 50%; /* Make the background a circle */
+          margin-right: 10px; /* Add space between the icon and text */
+        }
+      }
+    }
+  }
+}

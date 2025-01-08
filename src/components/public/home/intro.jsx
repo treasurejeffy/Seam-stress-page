@@ -9,7 +9,7 @@ export default function Intro() {
     return(
         <main className={`${Styles.intro} my-5`}>
             <Container>
-                <Row lg={2} md={2} sm={1} className="d-flex align-items-center">
+                <Row xl={2} lg={2} md={1} xs={1} sm={1} className="d-flex align-items-center">
                     <Col>                    
                         <img src={Image} alt="tailor" className={Styles.Image}/>
                     </Col>

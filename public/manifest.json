@@ -1,25 +1,35 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Pearl's Palace",
+  "name": "Pearl's Pretty Palace - Beauty, Fashion & Elegance",
   "icons": [
     {
-      "src": "./pearls-logo.gif",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "logo.png",
+      "sizes": "60x60",
+      "type": "image/png"
     },
     {
       "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "type": "image/png"
     },
     {
       "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "pearlDesigns.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "orientation": "portrait",
+  "theme_color": "#8B008B",
+  "background_color": "#F5F5F5",
+  "description": "Discover Pearl's Pretty Palace - your destination for beauty, custom tailoring, bridal fashion, and more!",
+  "categories": ["beauty", "fashion", "tailoring", "bridal", "cosmetics"],
+  "related_applications": [],
+  "prefer_related_applications": false
 }

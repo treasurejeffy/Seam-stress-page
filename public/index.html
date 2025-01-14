@@ -2,42 +2,67 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="pearls-logo.gif" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <meta name="author" content="Pearl's Pretty Palace" />
+    <meta name="description" content="Welcome to Pearl's Pretty Palace – your one-stop destination for beauty, fashion, custom tailoring, bridal fashion, and more!" />
+    <meta name="keywords" content="Pearl's Pretty Palace, Beauty Salon, Custom Tailoring, Bridal Fashion, Hair Care, Ankara Outfits, Fabrics, Cosmetics, Training Classes" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Pearl's Pretty Palace – Beauty, Fashion & More" />
+    <meta property="og:description" content="Discover beauty, fashion, and elegance with Pearl's Pretty Palace. Explore custom tailoring, bridal fashion, and personalized services." />
+    <meta property="og:image" content="%PUBLIC_URL%/pearlDesigns.png" />
+    <meta property="og:url" content="https://www.pearls-pretty-palace.com" />
+    <meta property="og:type" content="website" />
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Pearl's Pretty Palace – Beauty, Fashion & More" />
+    <meta name="twitter:description" content="Discover beauty, fashion, and elegance with Pearl's Pretty Palace. Explore custom tailoring, bridal fashion, and personalized services." />
+    <meta name="twitter:image" content="%PUBLIC_URL%/pearlDesigns.png" />
+    <meta name="twitter:creator" content="@pearls-pretty-palace" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="%PUBLIC_URL%/logo.png" />
+
+    <!-- Web Manifest -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+    <!-- Title -->
+    <title>Pearl's Pretty Palace – Beauty, Fashion & Elegance</title>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Pearl's Pretty Palace",
+        "image": "%PUBLIC_URL%/pearls-logo.png",
+        "description": "Beauty, fashion, and custom tailoring services including bridal fashion, hair care, and training classes.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 Fashion Avenue",
+          "addressLocality": "Lagos",
+          "addressRegion": "LA",
+          "postalCode": "100001",
+          "addressCountry": "NG"
+        },
+        "telephone": "+234123456789",
+        "email": "info@pearls-pretty-palace.com",
+        "url": "https://www.pearls-pretty-palace.com",
+        "openingHours": "Mo-Sa 09:00-18:00",
+        "sameAs": [
+          "https://www.facebook.com/pearls-pretty-palace",
+          "https://www.instagram.com/pearls-pretty-palace",
+          "https://www.twitter.com/pearls-pretty-palace"
+        ]
+      }
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

@@ -92,7 +92,7 @@ const Banner = () => {
           <Col className={`${styles.quality_product} bg-dark`}>
               <div className='d-flex gap-4'>
                 <div className='d-flex align-self-center'><FaHeadset size={55} className={styles.hand_thumb}/></div>
-                <div class="content-container">
+                <div className="content-container">
                   <h3>24/7 Support</h3>
                   <p>We're here for you around the clock. Our dedicated team is available 24/7 to assist with any inquiries or support needs, ensuring you never face challenges alone.</p>
                 </div>

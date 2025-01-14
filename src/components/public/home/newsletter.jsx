@@ -4,7 +4,7 @@ import styles from './home.module.scss';
 
 export default function Newsletter() {
     return(
-        <div className="py-5">
+        <div className="py-5 px-2">
             <Container  className={styles.Newsletter}>
                 <Row lg={2} md={1} sm={1} xs={1} className="d-flex align-items-center py-5">
                     <Col>

@@ -7,7 +7,7 @@ import Image2 from "../../../assets/beauty_headshot1.jpeg";
 import Image3 from "../../../assets/talioring3.jpg";
 import Image4 from "../../../assets/washinghair_salon.jpeg";
 import Image5 from "../../../assets/training.jpg"
-import styles from './home.module.scss'; // Import the SCSS file
+import styles from './home.module.scss';
 
 const responsive = {
   desktop: {

@@ -57,7 +57,7 @@ const Banner = () => {
           <Col
             lg={6}
             md={12}
-            className={`d-flex mt-3  justify-content-center justify-content-lg-end  justify-content-xl-end ${pulse ? styles.bounceRight : ''}`}
+            className={`d-flex mt-3  justify-content-md-center justify-content-lg-end  justify-content-xl-end ${pulse ? styles.bounceRight : ''}`}
           >
             <div
               className={`${styles.img_div} ${styles.sliderImage} mx-2`}
@@ -69,7 +69,7 @@ const Banner = () => {
           </Col>
         </Row>
       </Container>
-      <Container className={styles.threeBox}>
+      <Container className={`px-3 ${styles.threeBox}`}>
         <Row xxl={3} xl={3} lg={3} md={1} sm={1} xs={1} >
           <Col className={`${styles.quality_product} bg-dark`}>
               <div className='d-flex gap-4'>

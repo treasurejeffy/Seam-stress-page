@@ -11,7 +11,7 @@ export default function NavSection({ theme }) {
   }, [theme]);
   
   return (
-    <Navbar collapseOnSelect expand="lg" className={`shadow-sm ${theme === 'black-bg' ? styles.blackBg : ''}`}>
+    <Navbar collapseOnSelect expand="lg" className={`shadow-sm ${theme === 'black-bg' ? styles.blackBg : ''} ${styles.navbars}`}>
       <Container>
         <Navbar.Brand href="#home" className={styles.bounceDown}>
           <img src={logo} alt="logo" height={50} />
@@ -35,8 +35,8 @@ export default function NavSection({ theme }) {
             <Nav.Link href="#deets" className={styles.navLink}>Course</Nav.Link>
           </Nav>
           <Nav className={`ms-auto gap-2 ${styles.navbar_btn}`}>
-            <Button className={styles.btn}> <span>Sign Up</span></Button>
-            <Button className={styles.btn}> <span>Sign In</span></Button>
+            <Button className={`btn btn-dark fw-semibold ${styles.btn}`}> <span>Sign Up</span></Button>
+            <Button className={`btn btn-dark fw-semibold ${styles.btn}`}> <span>Sign In</span></Button>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -48,7 +48,7 @@ export default function AboutUs() {
             </section>
 
             {/* description section */}
-            <section className={`${styles.Description}  my-5 py-5`}>
+            <section className={`${styles.Description}  my-5 py-5 px-2`}>
                 <Container>
                     <Row xl={2} lg={2} md={1} sm={1} xs={1} className="d-flex align-items-center">
                         <Col>
@@ -95,7 +95,7 @@ export default function AboutUs() {
             </section>
             
             {/* steps to work with us */}
-            <section className={styles.stepsToWork}>
+            <section className={` px-2 ${styles.stepsToWork}`}>
                 <Container>
                     <article className="text-center mb-4">
                         <h6>3 Easy Steps </h6>
@@ -137,7 +137,7 @@ export default function AboutUs() {
             </section>
 
             {/* our team members */}
-            <section className={`my-5 py-5 ${styles.Tmembers}`}>
+            <section className={`my-5 py-5 px-2 ${styles.Tmembers}`}>
                 <Container>
                     <article className="text-center">
                         <h6>Team Members</h6>

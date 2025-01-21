@@ -28,7 +28,7 @@ export default function ContactUs() {
             </section>
 
             {/* description section */}
-            <section className={`${styles.Description}  my-5 py-5`}>
+            <section className={`${styles.Description}  my-5 px-2 py-5`}>
                 <Container>
                     <Row xl={3} lg={3} md={1} sm={1} xs={1} className="d-flex align-items-center">
                         <Col>
@@ -66,7 +66,7 @@ export default function ContactUs() {
             </section>
 
             {/*contact us section */}
-            <section className="pb-4">
+            <section className="pb-4 px-2">
                 <Container>
                     <article className={styles.WriteToContact}>
                         <h5>Contact Us</h5>

@@ -57,7 +57,7 @@ const Banner = () => {
           <Col
             lg={6}
             md={12}
-            className={`d-flex mt-3  justify-content-md-center justify-content-lg-end  justify-content-xl-end ${pulse ? styles.bounceRight : ''}`}
+            className={`d-flex mt-3 justify-content-sm-center  justify-content-md-center justify-content-lg-end  justify-content-xl-end ${pulse ? styles.bounceRight : ''}`}
           >
             <div
               className={`${styles.img_div} ${styles.sliderImage} mx-2`}
@@ -83,7 +83,7 @@ const Banner = () => {
           <Col className={`${styles.price}`}>
               <div className='d-flex gap-4'>
                 <div className='d-flex align-self-center'><FaDollarSign size={55} className={styles.hand_thumb}/></div>
-                <div class="content-container">
+                <div className="content-container">
                   <h3>Competitive Price</h3>
                   <p>Our pricing is designed to offer great value without compromising on quality. Enjoy top-notch products at rates that fit your budget.</p>
                 </div>

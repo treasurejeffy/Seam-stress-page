@@ -1,0 +1,432 @@
+@import '../../shared/variables.scss'; 
+
+.hero{
+    position: relative; /* Set relative positioning for the pseudo-element */
+    background-image: url('../../../assets/aboutusBg.jpg');
+    height: 95vh;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(49, 34, 1, 0.6); /* Adjust the opacity for darkness */
+    z-index: 1; /* Place the overlay above the background */
+}
+
+.hero_content {
+    position: relative; /* Ensure content is above the overlay */
+    z-index: 2;
+    color: #fff; /* Adjust text color for better contrast */
+    h1 {
+      animation: slideUp 1s ease-in-out forwards;
+      transform: translateY(50px); /* Start position */
+      opacity: 0; /* Start hidden */
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      font-size: 65px;
+      padding: 0px 0px 20px;
+    }
+  
+    p {
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        font-size: large;
+      animation: fadeIn 1.5s ease-in-out forwards;
+      opacity: 0; /* Start hidden */
+      animation-delay: 1s; /* Start after h1 animation */
+    }
+  }
+  
+  @keyframes slideUp {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+.Description{    
+    .DesImg{
+        img{
+            max-height: 620px;
+            width: 100%;
+            height: 620px; /* Ensure the image fills the column */
+            object-fit: cover;/* Ensure the image covers the column without distortion */
+            border-radius: 5px; 
+        }
+    }
+
+    .DesHeader{
+        h6{
+            color: $primary-color;
+            font-size: 20px;
+            font-weight: 530;
+        }
+
+        h2{
+            font-size: 40px;
+            font-weight: 700;
+            margin: 12px 0px 20px ;
+            position: relative;
+      
+            &::after {
+                content: '';
+                display: block;
+                width: 50px; /* Adjust width as needed */
+                height: 3px; /* Adjust height as needed */
+                background-color: $primary-color; /* Adjust color as needed */
+                margin: 8px  0; /* Adjust spacing as needed */
+            }
+        }
+        
+        p{
+            font-weight: 400;
+            font-size: medium;
+            margin-bottom: 20px;
+        }
+    }
+
+    .progressContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      
+      .progressWrapper {
+        position: relative;
+        margin: 7px 0px;
+        h6{
+            font-size: 18px;
+            font-weight: 550;
+        }
+      }
+      
+      .progressTooltip {
+        position: absolute;
+        bottom: 60%; // Position tooltip directly above the progress bar
+        left: 50%;
+        transform: translateX(-50%);
+        font-weight: bold;
+        color: $primary-color;
+        background-color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        animation: pushIn 0.8s ease-out forwards;
+        white-space: nowrap; // Prevent text wrapping
+        text-align: center;
+      
+        &::after {
+          content: '';
+          position: absolute;
+          top: 100%; // Align the triangle with the bottom of the tooltip
+          left: 50%;
+          transform: translateX(-50%);
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 5px 5px 0 5px; // Triangle shape
+          border-color: #fff transparent transparent transparent; // Match tooltip background color
+        }
+      }
+      
+      .customProgressBar {  
+        :global(.progress-bar) {
+            height: 100%; // Ensure it fills the parent height    
+            background-color: $primary-color !important;
+            transition: width 0.4s ease, background-color 0.3s ease;
+        }
+      }
+      
+      @keyframes pushIn {
+        0% {
+          opacity: 0;
+          transform: translateX(-50%) translateY(10px); // Start slightly below
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(-50%) translateY(0); // Align flush with progress bar
+        }
+      }
+      
+}
+
+.stepsToWork{
+    article{
+        h6{
+            font-weight: 520;
+            font-size: 25px;
+            color: $primary-color;
+        }
+        h2 {
+            font-size: 42px;
+            font-weight: 700;
+            position: relative;
+            text-align: center;  /* This centers the text itself */
+        
+            &::after {
+                content: '';
+                display: block;
+                width: 50px;  /* Adjust width as needed */
+                height: 3px;  /* Adjust height as needed */
+                background-color: $primary-color;  /* Adjust color as needed */
+                margin: 0.5px auto;  /* Auto margin to center it */
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -14px;  /* Adjust position if needed */
+            }
+        }       
+    }
+
+    .box{
+        b{
+            background-color: #000;
+            color: #fff;
+            padding: 18px 22px;
+            font-size: 24px;
+            font-weight: 550;
+            text-align: center;
+            position: relative;
+            right: 20px;
+        }
+
+        div{
+            padding: 30px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+            margin: 0px 10px 35px;
+            
+            h5{
+                font-size: 26px;
+                font-weight: 600;
+            }
+
+            p{
+                font-size: 17px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.Tmembers{
+    article{
+        h6{
+            font-weight: 520;
+            font-size: 25px;
+            color: $primary-color;   
+        }
+        h2 {
+            font-size: 42px;
+            font-weight: 700;
+            position: relative;
+            text-align: center;  /* This centers the text itself */
+        
+            &::after {
+                content: '';
+                display: block;
+                width: 50px;  /* Adjust width as needed */
+                height: 3px;  /* Adjust height as needed */
+                background-color: $primary-color;  /* Adjust color as needed */
+                margin: 0.5px auto;  /* Auto margin to center it */
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -14px;  /* Adjust position if needed */
+            }
+        }
+        p{
+            font-size: medium;
+            font-weight: 500;
+            padding: 20px 0px;
+        }
+    }
+
+    .imgContainer {
+      position: relative;
+      width: 100%;
+      height: 550px;  // Adjust height as needed
+      background-image: url('../../../assets/talioring2.jpeg');
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+      border-radius: 8px; // Optional for rounded corners
+      
+      /* Set initial state of overlay */
+      .imgOverlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0); /* Transparent initially */
+          color: white;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          align-items: center;
+          padding: 20px;
+          transform: translateX(-100%); /* Start from the left */
+          transition: background 0.5s ease, transform 1s ease;
+          visibility: hidden;  /* Initially hide the text */
+          opacity: 0;  /* Make it invisible */
+          
+          h5{
+            margin: 0;
+            z-index: 2;
+            font-size: 27px;
+            font-weight: 600;
+            color: #fff;
+          }
+          p {
+              color: $primary-color;
+              margin: 0;
+              z-index: 2;
+              text-align: center;            
+              font-weight: 550;
+              font-size: medium;
+          }
+        }
+  
+      /* On hover, apply the sliding effect and show the text */
+      &:hover .imgOverlay {
+          background: rgba(0, 0, 0, 0.6);  // Darken the image
+          transform: translateX(0);  // Slide in from the left
+          visibility: visible;  /* Show the text */
+          opacity: 1;  /* Fade in the text */
+      }
+  }
+
+  .imgContainers {
+    position: relative;
+    width: 100%;
+    height: 550px;  // Adjust height as needed
+    background-image: url('../../../assets//pic2.jpeg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    border-radius: 8px; // Optional for rounded corners
+    
+    /* Set initial state of overlay */
+    .imgOverlays {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0); /* Transparent initially */
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 20px;
+        transform: translateY(100%); /* Start from the bottom */
+        transition: background 0.5s ease, transform 1s ease;
+        visibility: hidden;  /* Initially hide the text */
+        opacity: 0;  /* Make it invisible */
+        
+        h5{
+          margin: 0;
+          z-index: 2;
+          font-size: 27px;
+          font-weight: 600;
+          color: #fff;
+        }
+        p {
+            color: $primary-color;
+            margin: 0;
+            z-index: 2;
+            text-align: center;            
+            font-weight: 550;
+            font-size: medium;
+        }
+      }
+
+    /* On hover, apply the sliding effect and show the text */
+    &:hover .imgOverlays {
+        background: rgba(0, 0, 0, 0.6);  // Darken the image
+        transform: translateY(0);  // Slide in from the bottom
+        visibility: visible;  /* Show the text */
+        opacity: 1;  /* Fade in the text */
+    }
+  }
+
+  .imgContainered {
+    position: relative;
+    width: 100%;
+    height: 550px;  // Adjust height as needed
+    background-image: url('../../../assets/garmentcutting.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    border-radius: 8px; // Optional for rounded corners
+    
+    /* Set initial state of overlay */
+    .imgOverlayed {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0); /* Transparent initially */
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 20px;
+        transform: translateX(100%); /* Start from the right */
+        transition: background 0.5s ease, transform 1s ease;
+        visibility: hidden;  /* Initially hide the text */
+        opacity: 0;  /* Make it invisible */
+        
+        h5{
+          margin: 0;
+          z-index: 2;
+          font-size: 27px;
+          font-weight: 600;
+          color: #fff;
+        }
+        p {
+            color: $primary-color;
+            margin: 0;
+            z-index: 2;
+            text-align: center;            
+            font-weight: 550;
+            font-size: medium;
+        }
+      }
+
+    /* On hover, apply the sliding effect and show the text */
+    &:hover .imgOverlayed {
+        background: rgba(0, 0, 0, 0.6);  // Darken the image
+        transform: translateX(0);  // Slide in from the right
+        visibility: visible;  /* Show the text */
+        opacity: 1;  /* Fade in the text */
+    }
+  }
+    
+}

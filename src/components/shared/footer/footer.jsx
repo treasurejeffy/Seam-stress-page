@@ -59,7 +59,7 @@ export default function Footer() {
                                     <span><IoCallOutline size={25} className="text-black"/></span>
                                     <div className={styles.contact}>
                                         <p>Call Anytime</p>
-                                        <h6>+234 8999 2989 908</h6>
+                                        <h6>+234 810 669 7767</h6>
                                     </div>
                                 </div>
                             </li>

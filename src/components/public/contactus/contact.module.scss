@@ -1,0 +1,201 @@
+@import '../../shared/variables.scss'; 
+
+.hero{
+    position: relative; /* Set relative positioning for the pseudo-element */
+    background-image: url('../../../assets/contactus.jpg');
+    height: 95vh;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(49, 34, 1, 0.6); /* Adjust the opacity for darkness */
+    z-index: 1; /* Place the overlay above the background */
+}
+
+.hero_content {
+    position: relative; /* Ensure content is above the overlay */
+    z-index: 2;
+    color: #fff; /* Adjust text color for better contrast */
+    h1 {
+      animation: slideUp 1s ease-in-out forwards;
+      transform: translateY(50px); /* Start position */
+      opacity: 0; /* Start hidden */
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      font-size: 65px;
+      padding: 0px 0px 20px;
+    }
+  
+    p {
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        font-size: large;
+      animation: fadeIn 1.5s ease-in-out forwards;
+      opacity: 0; /* Start hidden */
+      animation-delay: 1s; /* Start after h1 animation */
+    }
+  }
+  
+  @keyframes slideUp {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+.box {
+  position: relative;
+  background-color: #F9F1EC;
+  overflow: hidden; // Ensure the pseudo-element is contained within the box
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: $primary-color;
+    transition: right 0.9s ease; // Smooth transition for sliding effect
+    z-index: 0; // Ensure the pseudo-element is behind the content
+  }
+
+  &:hover::before {
+    right: 0; // Slide in the background color
+  }
+
+  &:hover .icon {
+    background-color: #F9F1EC; // Change icon background color on hover
+    color: $primary-color; // Change icon color on hover
+  }
+
+  .icon {
+    position: relative;
+    background-color: $primary-color;
+    padding: 18px 18px;
+    font-weight: 100;
+    color: #F9F1EC;
+    border-radius: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease; // Smooth transition for icon background and color
+    z-index: 1; // Ensure the icon is above the pseudo-element
+  }
+
+  .call {
+    position: relative;
+    z-index: 1; // Ensure the text is above the pseudo-element
+
+    h4 {
+      font-size: 24px;
+      font-weight: 550;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: medium;
+      font-weight: 400;
+      line-height: 10px;
+    }
+  }
+}
+
+.WriteToContact{
+  h5{
+    font-weight: 550;
+    font-size: 18px;
+    color: $primary-color;
+  }
+
+  h2{    
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 35px;
+    position: relative;
+      
+    &::after {
+      content: '';
+      display: block;
+      width: 50px; /* Adjust width as needed */
+      height: 3px; /* Adjust height as needed */
+      background-color: $primary-color; /* Adjust color as needed */
+      margin: 8px  0; /* Adjust spacing as needed */
+    }
+  }  
+}
+
+.inputs {
+  padding: 14px 12px;
+  background-color: #F9F1EC;
+
+  &:focus {
+    border: 1px solid $primary-color; // Border color when focused
+    background-color: #F9F1EC;
+    outline: none; // Remove default outline
+  }
+}
+
+.btn {
+  position: relative;
+  overflow: hidden;
+  padding: 13px 20px;
+  outline: none;
+  background-color: $secondary-color; // Default background color (dark)
+  color: $primary-color; // Default text color (gold)
+  font-weight: 520;
+  font-size:  18px;
+  text-transform: uppercase;
+  transition: color 0.3s ease, background-color 0.3s ease; // Smooth text color and background transition
+  border-right: 3px solid black; // Add border-right
+  border-top: none;
+  border-left: none;
+  border-bottom: none;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $primary-color; // Hover background color (gold)
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 0; // Ensure it is behind the text
+  }
+
+  &:hover::before {
+    transform: translateX(0); // Slide the background in from left to right
+  }
+
+  &:hover {
+    color: $secondary-color; // Change text color to dark on hover
+  }
+
+  span {
+    position: relative;
+    z-index: 1; // Keep the text above the background
+  }
+}

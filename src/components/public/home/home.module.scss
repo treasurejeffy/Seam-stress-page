@@ -192,6 +192,8 @@ body{
 
 .intro {
   margin: 30px 0px;
+  background-color: #f0f0f0f0;
+  padding: 60px 0px;
   .row {
     display: flex; /* Use Flexbox for row */
     align-items: stretch; /* Stretch items to have the same height */
@@ -200,7 +202,7 @@ body{
   .Image {
     width: 100%;
     height: 600px; /* Ensure the image fills the column */
-    object-fit: cover; /* Ensure the image covers the column without distortion */
+    object-fit: cover;/* Ensure the image covers the column without distortion */
     border-radius: 5px; /* Optional: Add rounded corners for better aesthetics */
   }
 
@@ -256,7 +258,7 @@ body{
       }
     }
   }
-}
+} 
 
 .carouselHeader {
   padding: 20px 0px 30px;

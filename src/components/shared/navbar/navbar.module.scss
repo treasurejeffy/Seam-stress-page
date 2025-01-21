@@ -16,6 +16,7 @@
 }
 
 .bounceDown {
+  cursor: pointer;
   animation: bounceDown 1s ease forwards; // The 'forwards' value makes the animation stick at the end
 }
 
@@ -37,15 +38,32 @@
 
 .navLink {
   position: relative;
-  padding-bottom: 5px; // Adjust as needed
+  text-decoration: none;
   transition: border-bottom 0.3s ease; // Smooth transition
   font-weight: 500;
   color: #4b4a49;
 
   &:hover {
     color: #4b4a49;
-    border-bottom: 2px solid rgb(196, 156, 107); // Border color on hover
-  }
+    border-bottom: 1.5px solid rgb(196, 156, 107); // Border color on hover
+  }  
+}
+
+.link{
+  text-decoration: none;
+  font-weight: 500;
+  color: #4b4a49;
+}
+
+.activeLink {
+  position: relative;
+  text-decoration: none;
+  margin: 0px 5px;
+  line-height: normal;
+  transition: border-bottom 0.3s ease; // Smooth transition
+  font-weight: 500;
+  color: #4b4a49;
+  border-bottom: 3px solid rgb(196, 156, 107); // Border color for active link
 }
 
 .blackBg{

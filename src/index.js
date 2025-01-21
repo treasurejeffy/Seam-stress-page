@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
-import Home from './components/public/home/home';
+import PublicRoute from './components/public/publicRoute';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Home/>
+    <PublicRoute/>
   </React.StrictMode>
 );
